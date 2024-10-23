@@ -1,5 +1,7 @@
 {
   "expo": {
+    "jsEngine": "hermes",
+    "entryPoint": "./index.js",
     "name": "MangaApp",
     "slug": "MangaApp",
     "version": "1.0.0",
@@ -12,7 +14,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.f0rever.MangaApp"
     },
     "android": {
       "adaptiveIcon": {
