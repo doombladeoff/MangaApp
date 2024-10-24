@@ -1,8 +1,11 @@
 import { View, Text, StyleSheet } from "react-native";
+import MangaUpdates from "./MangaUpdates";
+import RecentReleases from "./RecentReleases";
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={{ flex: 1 }}>
+      <RecentReleases />
+      <MangaUpdates />
     </View>
   );
 };

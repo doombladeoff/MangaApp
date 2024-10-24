@@ -4,7 +4,7 @@ import MainNavigation from "./MainNavigation";
 const NavigationRoot = () => {
   return (
     <>
-      <NavigationContainer>
+      <NavigationContainer theme={{ colors: "#fff" }}>
         <MainNavigation />
       </NavigationContainer>
     </>
