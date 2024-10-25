@@ -4,6 +4,7 @@ import {
 } from "@react-navigation/stack";
 
 import HomeNavigation from "../HomeNavigation";
+import TitleScreen from "../../screens/TitleScreen";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const MainNavigation = () => {
       })}
     >
       <Stack.Screen component={HomeNavigation} name="HomeNavigation" />
+      <Stack.Screen component={TitleScreen} name="TitleScreen" />
     </Stack.Navigator>
   );
 };
