@@ -1,12 +1,17 @@
 import { Image, StyleSheet, View, Text, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
-const MangaPreview = ({ title, coverUrl }) => {
+const MangaPreview = ({ title, coverUrl, mangaID }) => {
+  const navigation = useNavigation();
   const imageUrl = coverUrl;
   const shadows = ["transparent", "rgba(0,0,0,.01)", "rgba(0,0,0,.8)"];
 
+  const navigateToManga = () =>
+    navigation.navigate("TitleScreen", { mangaId: mangaID });
+
   return (
-    <Pressable style={styles.wrapper}>
+    <Pressable style={styles.wrapper} onPress={navigateToManga}>
       <View style={styles.innerContainer}>
         <Image source={{ uri: imageUrl }} style={styles.mangaImage} />
         <LinearGradient colors={shadows} style={styles.mangaShadow} />
